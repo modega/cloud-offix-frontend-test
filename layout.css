@@ -1,0 +1,59 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+.menu{
+    height: 200px;
+    width: 100%;
+    background-color: aqua;
+}
+.content{
+    width: calc(100% - 300px);
+    height: calc(100% - 400px);
+    background-color: red;
+    margin-left: 150px;
+    margin-right: 150px;
+    overflow: hidden;
+}
+.left{
+    width: 150px;
+    height: calc(100% - 400px);
+    background-color: slateblue;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    overflow: hidden;
+}
+.right{
+    width: 150px;
+    height: calc(100% - 400px);  
+    background-color: orchid;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    overflow: hidden;
+}
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+@media only screen and (max-width: 800px) {
+    .right{
+        visibility: hidden;
+    }
+    .left{
+        width: 10px;
+        transition: width 1s;
+    }
+    .left:hover{
+        width: 150px;
+        transition: width 1s;
+    }
+    .content{
+        margin-left: 10px;
+        margin-right: 0px;
+        width: calc(100% - 10px);
+    }
+}
